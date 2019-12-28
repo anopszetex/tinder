@@ -1,0 +1,97 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Open Sans";
+}
+
+html{height: 100%;}
+
+body{background: #fff !important;}
+
+.clear{clear: both;}
+
+header{
+	background: #42a5f5;
+	padding: 10px 0;	
+}
+
+.center{
+	max-width: 1280px;
+	padding: 0 2%;
+	margin: 0 auto;
+}
+
+.logo{
+	float: left;
+	color: white;
+}
+
+footer{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background: #42a5f5;
+	padding: 20px 0;
+	text-align: center;
+	color: white;
+}
+
+/*Form*/
+.principal{
+	padding: 40px 0;
+}
+
+.principal h2{
+	color: #4b4b4b;
+	font-size: 24px;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+.contato{
+	text-align: center;
+	background-color: #f2f2f2;
+	padding: 80px 0;
+}
+
+.contato form{
+	width: 100%;
+	max-width: 600px;
+	display: inline-block;
+}
+
+.contato form label{
+	text-align: left;
+	display: block;
+}
+
+.contato form input[type=email],
+.contato form input[type=password]{
+	width: 100%;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin: 8px 0;
+	padding: 12px 20px;
+	display: block;
+	font-size: 15px;
+}
+
+.contato form input[type='submit']{
+	width: 100px;
+	background: #42a5f5;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	cursor: pointer;
+	border: none;
+	border-radius: 3px;
+	display: block;
+	font-size: 16px;
+}
+
+.contato form input[type=submit]:hover{
+	background-color: #1e88e5;
+}
+
