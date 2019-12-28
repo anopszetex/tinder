@@ -28,10 +28,29 @@
 			}
 		}
 
-		public function startSession($email, $password) {
+		public function startSession($email, $id) {
 			$_SESSION['isLoggedIn'] = true;
 			$_SESSION['isLogin']    = $email;
-			$_SESSION['isPassword'] = $password;
+			$_SESSION['isUserId']	= $id;
+			$_SESSION['isNome']		= $this->userData($_SESSION['isUserId'])['nome'];
+		}
+
+		public function loggout() {
+			$_SESSION = array();
+			session_unset();
+			session_destroy();
+		}
+
+		public function getUserId($email) {
+			$stmt = $this->bd->connect()->prepare('SELECT id FROM usuarios WHERE email = ?');
+			$stmt->execute(array($email));
+			return $stmt->fetch()['id'];
+		}
+
+		public function userData($id) {
+			$stmt = $this->bd->connect()->prepare('SELECT * FROM usuarios WHERE id = ?');
+			$stmt->execute(array($id));
+			return $stmt->fetch();
 		}
 
 		public function logged() {

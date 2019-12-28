@@ -3,7 +3,7 @@
 
 	class MySql {
 
-		public $pdo;
+		private $pdo;
 
 		public function connect() {
 			if(is_null($this->pdo)) {

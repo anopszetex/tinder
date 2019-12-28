@@ -5,11 +5,13 @@
 	font-family: "Open Sans";
 }
 
-html{height: 100%;}
+html,body{height: 100%;}
 
 body{background: #fff !important;}
 
 .clear{clear: both;}
+
+.fixed{position: fixed;}
 
 header{
 	background: #42a5f5;
@@ -28,7 +30,6 @@ header{
 }
 
 footer{
-	position: fixed;
 	bottom: 0;
 	width: 100%;
 	background: #42a5f5;
@@ -37,7 +38,7 @@ footer{
 	color: white;
 }
 
-/*Form*/
+/*Form login*/
 .principal{
 	padding: 40px 0;
 }
@@ -51,7 +52,7 @@ footer{
 
 .contato{
 	text-align: center;
-	background-color: #f2f2f2;
+	border: 2px solid #f2f2f2;
 	padding: 80px 0;
 }
 
@@ -95,3 +96,45 @@ footer{
 	background-color: #1e88e5;
 }
 
+
+/*home*/
+.sidebar{
+	/*width: 300px;
+	height: 100%;
+	background: rgb(225, 225, 225);*/
+	overflow-x: hidden;
+	overflow-y: auto;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background: #455a65;
+	float: left;
+	width: 250px;
+}
+
+.topo{
+	padding: 10px 0;
+	text-align: center;
+	background: #78909c;
+	color: white;
+}
+
+.topo a{color: white;}
+
+.btn-coord{text-align: center;}
+
+.btn-coord a{
+	margin-top: 15px;
+	background: #78909c;
+	padding: 8px 10px;
+	color: white;
+	text-decoration: none;
+	display: inline-block;
+	border-radius: 3px;
+}
+
+.info-localizacao{
+	padding: 20px 10px;
+	color: white;
+}

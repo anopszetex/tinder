@@ -14,7 +14,12 @@
 			if($this->logged() === false)
 				$this->redirect(base_url.'login');
 
-			$this->view->render('home');
+			if(isset($_GET['deslogar'])) {
+				$this->loggout();
+				$this->redirect(base_url);
+			}
+
+			$this->view->render('home', ['data_user' => $this->userData($_SESSION['isUserId'])], 'headerLogado', null);
 		}
 
 		public function login() {
@@ -26,7 +31,8 @@
 				$password = $_POST['password'];
 
 				if($this->checkLogin($email, $password)) {
-					$this->startSession($email, $password);
+					$id = $this->getUserId($email);
+					$this->startSession($email, $id);
 					$this->redirect(base_url);
 				} else {
 					echo '<script>alert("Email ou Senha inválido.");</script>';
