@@ -14,7 +14,7 @@ body{background: #fff !important;}
 .fixed{position: fixed;}
 
 header{
-	background: #42a5f5;
+	background: #78909c;
 	padding: 10px 0;	
 }
 
@@ -32,7 +32,7 @@ header{
 footer{
 	bottom: 0;
 	width: 100%;
-	background: #42a5f5;
+	background: #78909c;
 	padding: 20px 0;
 	text-align: center;
 	color: white;
@@ -50,12 +50,6 @@ footer{
 	text-transform: uppercase;
 	text-align: center;
 }
-
-/*.contato{
-	text-align: center;
-	border: 2px solid #f2f2f2;
-	padding: 80px 0;
-}*/
 
 .contato form{
 	width: 100%;
@@ -89,7 +83,7 @@ footer{
 
 .contato form input[type='submit']{
 	width: 100px;
-	background: #42a5f5;
+	background: #78909c;
 	color: white;
 	padding: 14px 20px;
 	margin: 8px 0;
@@ -101,24 +95,18 @@ footer{
 }
 
 .contato form input[type=submit]:hover{
-	background-color: #1e88e5;
+	background-color: #455a65;
 }
 
 
 /*home*/
 .sidebar{
-	/*width: 300px;
+	width: 250px;
 	height: 100%;
-	background: rgb(225, 225, 225);*/
-	overflow-x: hidden;
-	overflow-y: auto;
-	height: 100%;
-	position: fixed;
-	left: 0;
-	top: 0;
 	background: #455a65;
 	float: left;
-	width: 250px;
+	overflow-x: hidden;
+	overflow-y: auto;
 }
 
 .topo{
@@ -131,6 +119,10 @@ footer{
 .topo a{
 	color: white; 
 	text-decoration: none;
+}
+
+.topo a:hover{
+	text-decoration: underline;
 }
 
 .btn-coord{text-align: center;}
@@ -151,4 +143,129 @@ footer{
 .info-localizacao{
 	padding: 20px 10px;
 	color: white;
+}
+
+.info-match h3{
+	text-align: center;
+	margin-top: 15px;
+	font-weight: normal;
+	font-size: 18px;
+	color: white;
+	background: #2f3d42;
+	padding: 8px 0;
+}
+
+.info-match ul li{
+	display: block;
+	padding: 8px;
+	font-weight: 300;
+	font-size: 16px;
+	text-decoration: none;
+	color: white;
+	border-bottom: 1px solid #2f3d42;
+}
+
+.info-match ul li > i{
+	color: #4CCC93;
+}
+
+.info-match .nomatch{text-align: center;}
+
+.user-distance{
+	display: block;
+	margin-top: 8px;
+}
+
+
+/*box-usuario-like*/
+.box-usuario-like{
+	width: 100%;
+}
+
+.box-tinder{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.box-usuario{
+	width: 290px;
+	overflow: hidden;
+	display: flex;
+	height: 350px;
+	border-radius: 7px;
+	border: solid 1px lightgray;
+}
+
+.box-usuario&:not(.one){
+ 	display: none;
+}
+
+.box-usuario .seven {
+    background: #fff;
+}
+
+.box-usuario .info{
+	background: #fff;
+    width: 100%;
+    align-self: flex-end;
+    padding: 15px;
+}
+
+.info h2{
+	font-size: 20px;
+    margin: 0;
+}
+
+.info p{
+	margin: 0;
+    font-size: 13px;
+    color: gray;
+}
+
+.buttons {
+	display: flex;
+	width: 245px;
+	margin: 12px auto;
+	margin-left: 90px;/*70px*/
+}
+
+.buttons a{text-decoration: none;}
+
+.buttons .button {
+    display: flex;
+    border: solid 9px #efefef;
+    border-radius: 40px;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0;
+    margin: 0 -5px;
+}
+
+.buttons .button.redo {
+    color: #FECD64;
+}
+
+.buttons .button.no {
+    color: #FF6B6B;
+    font-size: 28px;
+    width: 60px;
+    height: 60px;
+}
+
+.buttons .button.yes {
+    color: #4CCC93;
+    font-size: 28px;
+    width: 60px;
+    height: 60px;
+}
+
+.buttons .button.star {
+    color: #2CB3C9;
 }

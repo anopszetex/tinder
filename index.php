@@ -13,5 +13,4 @@
 
 	if(Router::isExecuted() === false)
 		die('Página não encontrada :(');
-
 ?>

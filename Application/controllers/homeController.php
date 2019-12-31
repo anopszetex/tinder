@@ -19,7 +19,21 @@
 				$this->redirect(base_url);
 			}
 
-			$this->view->render('home', ['data_user' => $this->userData($_SESSION['isUserId'])], 'headerLogado', null);
+			if(isset($_GET['action'])) {
+				$action = (int)$_GET['action'];
+				$userId = (int)$_GET['id'];
+
+				if($action < 0) return;
+				if($action > 1) return;
+
+				if($action == 0) {
+					$this->like($action, $userId);
+				} else if($action == 1) {
+					$this->like($action, $userId);
+				}
+			}
+
+			$this->view->render('home', ['data' => $this], 'headerLogado', null);
 		}
 
 		public function login() {
@@ -35,7 +49,7 @@
 					$this->startSession($email, $id);
 					$this->redirect(base_url);
 				} else {
-					echo '<script>alert("Email ou Senha inválido.");</script>';
+					echo '<script>alert("E-mail ou Senha inválido.");</script>';
 				}
 			}
 			$this->view->render('login');
